@@ -3,8 +3,6 @@ spring:
     active:
       - dev
 ---
-spring:
-  profiles: dev
 
 server:
   port: 8004
@@ -16,6 +14,7 @@ mybatis:
     - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
 
 spring:
+  profiles: dev
   application:
     name: microservicecloud-dept
   datasource:
@@ -38,10 +37,3 @@ eureka:
   instance:
     instance-id: microservicecloud-dept8004xxxx
     prefer-ip-address: true     #访问路径可以显示IP地址
-
-info:
-  app.name: atguigu-microservicecloud
-  company.name: www.atguigu.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
-
